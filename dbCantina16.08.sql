@@ -118,6 +118,8 @@ insert into tbProdutos(descricao,quantidade,valor,validade,dataEntrada,horaEntra
 	insert into tbProdutos(descricao,quantidade,valor,validade,dataEntrada,horaEntrada,codForn) values ('Mesa',15,1400.00, '2030/08/21','2024/08/20','18:50:34',2);
 		insert into tbProdutos(descricao,quantidade,valor,validade,dataEntrada,horaEntrada,codForn) values ('Secadora',15,1100.00, '2030/09/18','2024/09/18','17:50:34',1);
 
+
+
 			insert into tbVendas (dataVenda,horaVenda,quantidade,codUsu,codCli,codProd) values('2024/08/16','19:51:31',1,2,3,3);
 				insert into tbVendas (dataVenda,horaVenda,quantidade,codUsu,codCli,codProd) values('2024/08/16','19:51:31',2,1,2,2);
 
@@ -128,6 +130,16 @@ select * from tbClientes;
 select * from tbUsuarios;
 select * from tbProdutos;
 select * from tbVendas;
---outra forma 
+--alterando os registros das tabelas
+
+update tbProdutos set descricao = 'Coxinha', valor = 7.00 where codProd = 1;
+
+	update tbProdutos set descricao = 'Pastel', valor = 10.00 where codProd = 2;
+
+	update tbProdutos set descricao = 'Pamonha', valor = 5.00 where codProd = 3;
+
+--Visualizando apos alteração.
+select *from tbProdutos;
+
 
 --check(sexo = 'F' or sexo = 'M');
