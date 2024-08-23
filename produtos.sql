@@ -75,3 +75,7 @@ select valor *1.20 as 'Valor' from produtos where nome like 'F%';
 update produtos set valor = valor * 1.12 where nome like 'f%';
 --Para verificar o update
 select nome,valor from produtos where nome like 'f%';
+
+update produtos set quantidade = quantidade + 50 where valor > 400 and valor <600;
+
+	select * from produtos where valor > 400 and valor < 600;
