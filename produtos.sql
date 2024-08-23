@@ -50,3 +50,28 @@ select * from produtos where quantidade >=30 or <=50;
 select * from produtos where nome= 'Monitor' and tipo = 'INFORMATICA';
 select * from produtos where nome= 'Monitor' or tipo = 'INFORMATICA';
 select * from produtos where tipo in('Informatica','Telefone');
+--vai mostrar tudo menos os campos informados abaixo.
+select * from produtos where tipo not in('Informatica','Telefone');
+select * from produtos where between and 250 and 600;
+select * from produtos where not between  250 and 600;
+
+-- pesquisa por codigo, pesquisa por nome
+--%nome
+--nome%
+--%nome%
+
+select * from produtos where nome  like '%o';
+select * from produtos where nome  like 'i%';
+select * from produtos where nome  like '%a%';
+select * from produtos where nome like '%a%';
+select * from produtos where nome  like '%a%' and tipo = 'INFORMATICA';
+select * from produtos where nome  like '%a%' or tipo ='INFORMATICA';
+select * from produtos where nome  not like '%a%' tipo = 'INFORMATICA';
+
+select valor from produtos where nome like 'f%';
+select valor *1.20 as 'Valor' from produtos where nome like 'F%';
+
+-- comando update
+update produtos set valor = valor * 1.12 where nome like 'f%';
+--Para verificar o update
+select nome,valor from produtos where nome like 'f%';
